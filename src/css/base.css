@@ -1,0 +1,8 @@
+/* Typography and layout fundamental styles */
+
+body {
+    --spacing-medium: 230px;
+
+    margin-left: var(--spacing-medium);
+    margin-right: var(--spacing-medium);
+}

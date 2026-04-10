@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+    <header>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+        <title>Portfolio Buwembo</title>
+
+        <!-- Linking CSS files in the correct order for proper styling -->
+        <link rel="stylesheet" href="./css/variables.css">
+        <link rel="stylesheet" href="./css/reset.css">
+        <link rel="stylesheet" href="./css/base.css">
+        <link rel="stylesheet" href="./css/sections.css">
+        <link rel="stylesheet" href="./css/responsive.css">
+        <link rel="stylesheet" href="./css/components.css">
+    </header>
+
+    <body>
+        <main>
+            <section id="sendemail">
+                <h1>Send Me a Message!</h1>
+                <h2>Have a question? Would like to get in touch? Or just want to say hello? Go ahead and send me a message!</h2>
+            </section>
+
+            <form>
+                <div class="form-side-by-side">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
+                        <label for="name">Your Name</label>
+
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required>
+                        <label for="email">Your Email</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <textarea id="message" name="message" rows="5" required></textarea>                    
+                </div>
+
+                <button type="submit">Launch -></button>
+
+                <p> Back To <a href="index.html">Portfolio</a></p>
+            </form>
+        </main>
+
+    </body>
+
+</html>

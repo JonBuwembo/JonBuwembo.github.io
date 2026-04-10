@@ -1,0 +1,21 @@
+/* Responsive Design */
+
+.cursor {
+    animation: blink 0.7s infinite;
+    font-weight: 1000;
+    transform: scaleX(3.5);
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+.name-container {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+
