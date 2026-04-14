@@ -13,6 +13,51 @@
                 margin: 0 auto;
             }
 
+            .center-text {
+                text-align: center;
+            }
+
+            .portfolio {
+                text-align: center;
+                font-weight: bolder;
+                margin-bottom: 0;
+            }
+
+            h2 {
+                margin-top: 0px;
+                text-align: center;
+                font-size: 50px;
+                background: linear-gradient(
+                    45deg,
+                    #ff00cc,
+                    rgb(3, 26, 109),
+                    rgba(10, 22, 99, 0)
+                );
+
+                background-size: 50% 100%;
+
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+
+                animation: gradientShift 3s linear infinite;
+
+          
+            }
+
+            @keyframes gradientShift {
+                0%{
+                    background-position: 0% 0%;
+                }
+
+             
+
+                100% {
+                    background-position: 100% 100%;
+                }
+
+            }
+
             .section-title {
                 text-align: center;
                 font-size: 2.5rem;
@@ -41,8 +86,8 @@
             }
 
             .project-card:hover {
-                transform: translateY(-8px);
-                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+                transform: translateY(-10px);
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
             }
 
             /* Card Image */
@@ -264,7 +309,7 @@
 
             <section id="skills">
                 <h2>Technologies I've Used</h2>
-                <p>I bring a continuous desire to learn, team work and collaboration skills.</p>
+                <p class="center-text">I bring a continuous desire to learn, team work and collaboration skills.</p>
 
                 <div class="skills-section-wrapper">
                     <div class="skills-section-container">
@@ -286,8 +331,9 @@
             </section>
 
             <section id="projects">
-                <h2>My Projects</h2>
-                <p></p>
+                <p class="portfolio"> PORTFOLIO</p>
+                <h2>Featured Projects</h2>
+                <p class="center-text"> A curated selection of projects that made me confident in building software.</p>
 
                 <div class="projects-grid">
                     <a href="project.html?project=lemurs-application" class="project-card">
