@@ -6,6 +6,193 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
         <title>Portfolio Buwembo</title>
+        <style>
+                
+
+            .container {
+                max-width: 1400px;
+                margin: 0 auto;
+            }
+
+            .section-title {
+                text-align: center;
+                font-size: 2.5rem;
+                margin-bottom: 60px;
+                font-weight: 600;
+            }
+
+            /* Projects Grid */
+            .projects-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+                gap: 30px;
+            }
+
+            /* Project Card */
+            .project-card {
+                position: relative;
+                border-radius: 16px;
+                overflow: hidden;
+                background: #1a1f2e;
+                cursor: pointer;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                text-decoration: none;
+                display: block;
+                height: 400px;
+            }
+
+            .project-card:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            }
+
+            /* Card Image */
+            .card-image {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.5s ease, filter 0.3s ease;
+            }
+
+            .project-card:hover .card-image {
+                transform: scale(1.05);
+                filter: brightness(0.3);
+            }
+
+            /* Overlay Content */
+            .card-overlay {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                padding: 30px;
+                background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 50%, transparent 100%);
+                transform: translateY(60%);
+                transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+
+            .project-card:hover .card-overlay {
+                transform: translateY(0);
+            }
+
+            /* Project Title */
+            .project-title {
+                opacity: 0;
+                font-size: 1.8rem;
+                font-weight: 700;
+                margin-bottom: 12px;
+                color: #fff;
+            }
+
+            .project-card:hover .project-title{
+                opacity: 1;
+            }
+
+            /* Description */
+            .project-description {
+                opacity: 0;
+                font-size: 1rem;
+                line-height: 1.6;
+                color: #b0b8c4;
+                margin-bottom: 20px;
+                opacity: 0;
+                transform: translateY(20px);
+                transition: opacity 0.3s ease 0.1s, transform 0.3s ease 0.1s;
+            }
+
+            .project-card:hover .project-description {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            /* Skills Tags */
+            .skills-container {
+                opacity: 0;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                transform: translateY(20px);
+                transition: opacity 0.3s ease 0.2s, transform 0.3s ease 0.2s;
+            }
+
+            .skills-section-container {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+
+            .project-card:hover .skills-container {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            .skill-tag {
+                background: rgba(255, 255, 255, 0.15);
+                backdrop-filter: blur(10px);
+                padding: 6px 14px;
+                border-radius: 1.25rem;
+                font-size: 0.85rem;
+                font-weight: 500;
+                color: #fff;
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                transition: background 0.2s ease;
+            }
+
+            .skill-tag:hover {
+                opacity: 1;
+                background: rgba(255, 255, 255, 0.25);
+            }
+
+            /* Arrow Icon */
+            .arrow-icon {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                width: 40px;
+                height: 40px;
+                background: rgba(255, 255, 255, 0.1);
+                backdrop-filter: blur(10px);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                opacity: 0;
+                transform: translateX(-10px);
+                transition: all 0.3s ease;
+            }
+
+            .project-card:hover .arrow-icon {
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+            .arrow-icon svg {
+                width: 20px;
+                height: 20px;
+                stroke: #fff;
+                stroke-width: 2;
+                fill: none;
+            }
+
+            /* Responsive */
+            @media (max-width: 768px) {
+                .projects-grid {
+                    grid-template-columns: 1fr;
+                }
+                
+                .project-card {
+                    height: 350px;
+                }
+                
+                .section-title {
+                    font-size: 2rem;
+                }
+            }
+    
+        </style>
 
 
         <!-- Linking CSS files in the correct order for proper styling -->
@@ -15,6 +202,8 @@
         <link rel="stylesheet" href="./css/sections.css">
         <link rel="stylesheet" href="./css/responsive.css">
         <link rel="stylesheet" href="./css/components.css">
+        <link rel="stylesheet" href="./css/skills.css">
+        <!-- <link rel="stylesheet" href="./css/project.css"> -->
     </head>
 
     <body>
@@ -64,24 +253,98 @@
 
             <section id="about">
                 <h2>About Me</h2>
-                <p>Growing up, I've always been fascinated about a way I can change the world through technology. As a child, I remember one day when my father was driving me to school and he asked me, "Jonathan! look at those traffic lights!"</p>
+                <p>Growing up, I’ve always been fascinated by the idea of changing the world through technology. One moment in particular shaped that perspective.</p>
 
-                <p> I asked him, "What about them?" while I thought in my head they always change color.</p>
-                <p> "HMM" he responded, "Have you ever thought about how the lights change?" </p>
-                <p> I thought about it for a moment and then I said, "No, I guess I haven't." how would I know? I was barely 11 years old? </p>
-                <p> "<em>Well</em> ... they use software! There are programs running those lights!"</p>
-                <p> And from that point onward, I looked at the world differently, not just as an observer who assumed everything worked just as they were supposed to, but as a problem solver, and an inquirer who constantly seeked to understand <b><i>HOW</i></b> and <b><i>WHY</i></b> things worked. My passion for software development was born from that moment.</p>
-                <p> ... And ever since, I never turned back.</p>
+                <p> When I was about 11, my father pointed out a set of traffic lights and asked me if I had ever thought about how they worked. I hadn’t. Then he told me: “They run on software.”</p>
+
+                <p> That simple idea changed how I saw the world. From that point on, I stopped viewing technology as something that simply existed and started questioning how and why things worked. I became curious, analytical, and driven to understand the systems behind everyday life. </p>
+
+                <p> That curiosity eventually grew into a passion for software development. A passion that continues to push me to build, learn, and solve real-world problems. </p>
+
             </section>
 
             <section id="skills">
-                <h2>My Skills</h2>
-                <p>This is the skills section of my portfolio website. This is the skills section of my portfolio website. This is the skills section of my portfolio website. This is the skills section of my portfolio website. This is the skills section of my portfolio website.</p>
+                <h2>Technologies I've Used</h2>
+                <p>I bring a continuous desire to learn, team work and collaboration skills.</p>
+
+                <div class="skills-section-wrapper">
+                    <div class="skills-section-container">
+                        <h3 class="skill-title">Languages</h3>
+                        <div class="tech-grid" id="languages"></div>
+                    </div>
+
+                    <div class="skills-section-container">
+                        <h3 class="skill-title">Frameworks & Libraries</h3>
+                        <div class="tech-grid" id="frameworks"></div>
+                    </div>
+
+                    <div class="skills-section-container">
+                        <h3 class="skill-title">Tools</h3>
+                        <div class="tech-grid" id="tools"></div>
+                    </div>
+                </div>
+                
             </section>
 
             <section id="projects">
                 <h2>My Projects</h2>
-                <p>This is the projects section of my portfolio website. This is the projects section of my portfolio website. This is the projects section of my portfolio website. This is the projects section of my portfolio website. This is the projects section of my portfolio website.</p>
+                <p></p>
+
+                <div class="projects-grid">
+                    <a href="project.html?project=lemurs-application" class="project-card">
+                        <img src="./assets/images/projects/lemurs-logo.png" alt="Lemurs Project" class="card-image">
+
+                        <div class="arrow-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+
+                        <div class="card-overlay">
+                            <h3 class="project-title">Mental Health Application</h3>
+                            <p class="project-description">
+                                An android and iOS application for predicting the mental health of students at UMASS Amherst and WPI
+                            </p>
+                            <div class="skills-container">
+                                <span class="skill-tag">Kotlin</span>
+                                <span class="skill-tag">XCode </span>
+                                <span class="skill-tag">Android Studios </span>
+                                <span class="skill-tag">PostgreSQL</span>
+                                <span class="skill-tag">Kotlin Compose UI</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="project.html?project=research-enrollment-system" class="project-card">
+                        <img src="./assets/images/projects/research-enroll.png" alt="Research Enrollment System" class="card-image">
+        
+                        <!-- Arrow comes on top of image as well -->
+                        <div class="arrow-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        
+
+                        <!-- Content in this div comes on top of the image-->
+                        <!-- card-overlay class gives dark gradient overlay -->
+                        <div class="card-overlay">
+                            <h3 class="project-title">Research Enrollment Application</h3>
+                            <p class="project-description">
+                                A secure web platform for managing participant enrollment in academic 
+                                research studies with HIPAA-compliant data handling and automated workflows.
+                            </p>
+                            <div class="skills-container">
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">Flask </span>
+                                <span class="skill-tag">SQLAlchemy</span>
+                                <span class="skill-tag">Bootstrap</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                
             </section>
 
             <section id="contact">
@@ -94,7 +357,11 @@
             <p>&copy; 2026 Jonathan Buwembo. All rights reserved.</p>
         </footer>
   
-        <script src="js/main.js"></script>
+        <script type="module" src="js/main.js"></script>
+        <script type="module" src="js/project-render.js"></script>
+        <script type="module" src="js/projects.js"></script>
+        <script type="module" src="js/render-icons.js"></script>
+
     </body>
 
 </html>

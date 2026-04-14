@@ -16,7 +16,7 @@ function typeEffect() {
     if (i < text.length) {
         document.getElementById("name").innerHTML += text.charAt(i);
         i++;
-        setTimeout(typeEffect, 120);
+        setTimeout(typeEffect, 90);
     }
 }
 

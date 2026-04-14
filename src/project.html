@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+        <title>Project Details</title>
+
+        <!-- Linking CSS files in the correct order for proper styling -->
+        <link rel="stylesheet" href="./css/variables.css">
+        <link rel="stylesheet" href="./css/reset.css">
+        <link rel="stylesheet" href="./css/base.css">
+        <link rel="stylesheet" href="./css/sections.css">
+        <link rel="stylesheet" href="./css/responsive.css">
+        <link rel="stylesheet" href="./css/components.css">
+        <link rel="stylesheet" href="./css/project.css">
+
+    </head>
+
+    <body>
+        <nav class="nav">
+            <a href="index.html">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Back to Projects
+            </a>
+        </nav>
+
+        <main class="projects-container" id="project-content">
+            <!-- Dynamically displayed projects-->
+        </main>
+
+        <script type="module" src="js/project-render.js"></script>
+        <script type="module" src="js/projects.js"></script>
+        
+    </body>
+</html>
