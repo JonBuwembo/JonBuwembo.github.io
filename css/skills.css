@@ -26,9 +26,9 @@
 .tech-badge:hover {
     background-color: #393d45;
     transform: 
-        translateY(-2px)
-        translateZ(80px)
-        scale(1.2); /*bigger like a magnifying glass*/
+        translateY(-2px) 
+        translateZ(0.3px)
+        scale(1.1); /*bigger like a magnifying glass*/
     box-shadow: 0 4px 16px rgba(0, 217, 255, 0.6);
 }
 
@@ -40,7 +40,7 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    font-family:'Courier New', Courier, monospace !important;
+    font-family:'JetBrains Mono', 'Courier New', Courier, monospace !important;
 }
 
 .skill-title::before {
@@ -59,7 +59,7 @@
 
 .tech-name {
     font-size: 0.95rem;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'JetBrains Mono', 'Courier New', Courier, monospace;
     font-weight:300;
     color: #eaeaea;
 }

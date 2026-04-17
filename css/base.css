@@ -1,8 +1,12 @@
 /* Typography and layout fundamental styles */
 
-body {
-    --spacing-medium: 230px;
+.page-layout {
+    margin-left: 230px;
+    margin-right: 230px;
+}
+.email-body-container {
+    --spacing-medium: 430px;
 
-    margin-left: var(--spacing-medium);
+    margin-left: var(--spacing-medium) ;
     margin-right: var(--spacing-medium);
 }
