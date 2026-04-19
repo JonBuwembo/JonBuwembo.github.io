@@ -42,17 +42,17 @@ a {
 }
 
 .button-container .github:hover {
-    background-color: #312f2f;
+    background-color: #3d3b3b;
     color: #fff;
-    border: 1px solid #312f2f;
-    transition: 800ms;
+    border: 1px solid #3d3b3b;
+    transition: 200ms !important;
 }
 
 .button-container .linkedin:hover {
     background-color: transparent;
     color: var(--color-text);
     border: 1px solid var(--color-linkedin-border);
-    transition: 800ms;
+    transition: 200ms !important;
 }
 
 .button-container .github:active {
@@ -183,7 +183,7 @@ input:focus, textarea:focus {
 
 
 
-button {
+#submit-contact-form {
     display:block;
     width: 100%;
     background: #4f8cff;
@@ -198,13 +198,13 @@ button {
     transition: all 0.25s ease;
 }
 
-button:hover {
+#submit-contact-form:hover {
     transform: translateY(-4px);
     background: #4971ba;
     box-shadow: 0 10px 20px rgba(79,140,255,0.25);
 }
 
-button:active {
+#submit-contact-form:active {
     transform: scale(0.98);
 }
 
