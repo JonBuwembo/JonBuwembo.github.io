@@ -30,5 +30,5 @@ document.addEventListener("submit", async (e) => {
         button.textContent = "Send message";
         button.disabled = false;
         messageStatus.textContent = "";
-    }, 2500);
+    }, 3500);
 })

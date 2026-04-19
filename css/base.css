@@ -10,3 +10,10 @@
     margin-left: var(--spacing-medium) ;
     margin-right: var(--spacing-medium);
 }
+
+.project-body-container {
+    --spacing-medium: 380px;
+
+    margin-left: var(--spacing-medium);
+    margin-right: var(--spacing-medium);
+}
