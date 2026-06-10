@@ -42,20 +42,20 @@ function renderProject(projectId) {
         <div class="project-meta">
             <div class="meta-item">
                 <span class="meta-label">Duration</span>
-                <span class="meta-label">${project.duration}</span>
-            </div>
-        </div>
-
-        <div class="skills-section">
-            <h3 class="section-heading">Technologies Used</h3>
-            <div class="skills-list">
-                ${project.skills.map(skill =>
-                    `<span class="skill-tag">${skill}</span>`).join('')}
+                <span class="meta-label-duration">${project.duration}</span>
             </div>
         </div>
     </div>
 
     <img src="${project.image}" alt="${project.title}" class="project-image">
+
+    <div class="skills-section">
+        <h2 class="section-heading">Technologies Used</h2>
+        <div class="skills-list">
+            ${project.skills.map(skill =>
+                `<span class="skill-tag">${skill}</span>`).join('')}
+        </div>
+    </div>
 
     <div class="content-section">
         <h2>Project Overview</h2>
@@ -69,10 +69,22 @@ function renderProject(projectId) {
         </ul>
     </div>
 
+    
+
+    <div class="content-section">
+        <h2>Technical Highlights</h2>
+        <ul>
+            ${project.highlights.map(highlight => `<li>
+                ${highlight} 
+            </li>`).join('')}
+        </ul>
+    </div> 
+    
     <div class="content-section">
         <h2>Challenges</h2>
         <p>${project.challenges}</p>
-    </div> `;
+    </div> 
+    `;
     
     document.title = `${project.title} - Project Details`
 

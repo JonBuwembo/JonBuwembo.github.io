@@ -11,13 +11,13 @@
 }
 
 .skill-tag {
-    background: rgba(47, 44, 47, 0.15) !important;
+    background: #F3F4F6 !important;
     padding: 6px 14px;
     border-radius: 20px;
     font-size: 0.85rem;
     font-weight: 500;
-    color: #120909;
-    border: 1px solid rgba(24, 21, 21, 0.2);
+    color: #374151;
+    border: 1px solid #D1D5DB;
     transition: background 0.2s ease;
 }
 
@@ -61,19 +61,16 @@
 
 .project-subtitle {
     font-size: 1.3rem;
-    color: #8b92a8;
+    color: #4f5157;
     max-width: 600px;
     line-height: 1.6;
 }
 
 .project-meta {
     display: flex;
-    gap: 40px;
-    margin: 40px 0;
-    padding: 30px;
-    background: rgba(255, 255, 255, 0.03);
-    border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    gap: 20px;
+    padding: 5px 20px;
+    color: rgb(36, 31, 31);
 }
 
 .meta-item {
@@ -89,6 +86,14 @@
     letter-spacing: 0.05rem;
 }
 
+.meta-label-duration {
+    font-size: 0.85rem;
+    color: purple;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    font-weight: 600;
+}
+
 .meta-value {
     font-size: 1.1rem;
     color: #fff;
@@ -99,11 +104,6 @@
     margin: 40px 0;
 }
 
-.section-heading {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    color: #493939;
-}
 
 .skills-list {
     display: flex;
@@ -115,7 +115,7 @@
     margin: 30px 0;
 }
 
-.content-section h2 {
+.content-section h2, .skills-section h2{
     font-size: 1.8rem;
     margin-bottom: 20px;
     color: #504a4a;
@@ -154,8 +154,6 @@
     max-height: 500px;
     object-fit: cover;
     border-radius: 16px;
-    margin-top: 20px;
-    margin-bottom: 20px;
     border: 1px solid rgba(255,255,255,0.1);
 }
 
