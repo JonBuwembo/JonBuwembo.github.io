@@ -9,7 +9,7 @@
         overview: 
             'LEMURS (leveraging Ecological Monitoring to Understand Risk Signals) is a cross-platform mobile application that uses passive smartphone data and machine learning to identify potential indicators of depression and suicidal ideation among college students. The system collects both Active data through surverys (PHQ-9, daily wellness surveys, written responses, audio responses), and Passive data through smartphone sensors (screen time, health metrics, Bluetooth proximity). The goal is to reduce reliance on self-reporting and enable earlier intervention by identifying behavioral patterns associated with mental health risks. This application was developed as part of an NIH-funded research initiative involving WPI and UMass Amherst.',
         challenges: 
-            'Converting Android-Only code into a True Cross-Patform Architecture: The previous team\'s codebase claimed to use KotlinMuliplatform but contained significant Android-specific code. This challenge included, Refractoring commonMain, Moving Android-only logic, creating expect/actual implementations, Building an iOS architecture from scratch. Another challenge involved passive data reliability. Information on passive data was lost to network failures, app closures, and device restarts. Solutions involved local realm database storage and persistant DataStore tokens. The team grappled with race conditions in survey submission as multiple coroutines were submitting survey data simultaneously causing duplicate submissions, Foreign Key mismatches, and Incorrect audio/written response associations.',
+            'Our team struggled to convert Android-Only code into a true Cross-Patform Architecture: The previous team\'s codebase claimed to use KotlinMuliplatform but contained significant Android-specific code. This challenge included, Refractoring commonMain, Moving Android-only logic, creating expect/actual implementations, Building an iOS architecture from scratch. Another challenge involved passive data reliability. Information on passive data was lost to network failures, app closures, and device restarts. Solutions involved local realm database storage and persistant DataStore tokens. The team grappled with race conditions in survey submission as multiple coroutines were submitting survey data simultaneously causing duplicate submissions, Foreign Key mismatches, and Incorrect audio/written response associations.',
         features: 
             [
                 'Cross-platform Android and iOS application built with Kotlin Multiplatform.',
@@ -20,10 +20,10 @@
                 'Machine learning pipeline for data processing, feature engineering, and predictive modeling.'],
         highlights: 
             [
-                "Developed a full-stack ecosystem consisting of mobile apps, backend APIs, PostgreSQL database, React dashboard, and ML pipeline.",
-                "Migrated an Android-centric codebase into a shared Kotlin Multiplatform architecture, significantly reducing code duplication.",
-                "Integrated native iOS frameworks including HealthKit, CoreBluetooth, and background task scheduling through Swift–Kotlin interoperab",
-                "Built resilient offline data synchronization using Realm persistence and background workers"
+                "A full-stack ecosystem consisting of mobile apps, backend APIs, PostgreSQL database, React dashboard, and ML pipeline.",
+                "successful migration of Android-centric codebase into a shared Kotlin Multiplatform architecture, significantly reducing code duplication.",
+                "An Integrated native iOS frameworks including HealthKit, CoreBluetooth, and background task scheduling through Swift–Kotlin interoperab",
+                "Resilient offline data synchronization using Realm persistence and background workers"
             ]
     },
 
