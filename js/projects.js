@@ -3,12 +3,28 @@
         title: 'LEMURS: Risk Of Suicidal Ideation',
         subtitle: 'An android and iOS application for predicting the mental health of students at UMASS Amherst and WPI',
         image: './assets/images/projects/lemurs-logo.png',
-        duration: '7 months',
-        skills: ['Kotlin Compose UI', 'Kotlin', 'Android Studios', 'PostgreSQL', 'Xcode'],
-        overview: 'A Full-stack Android and iOS application built and scaled using cross-functional Kotlin Multiplatform, featuring daily surveys, weekly surveys, and additional modalities for collection of data such as Audio, Written, and screentime data collection. This data would be used to predict the risk of suicidal ideation amongst student at University of Massachusetts Amherst and Worcester Polytechnic Institute.',
-        challenges: 'Developing a sandbox for shared cross-functional code between iOS and Android to work. Additionally, improving data consistency and reliability within screentime collection. Developing a bridge between Xcode and Android Studios.',
-        features: ['Passive collection of audio, screentime and written data'],
-        highlights: [""]
+        duration: '9 months',
+        skills: 
+            ['Kotlin Compose UI', 'Kotlin', 'Android Studios', 'PostgreSQL', 'Xcode'],
+        overview: 
+            'LEMURS (leveraging Ecological Monitoring to Understand Risk Signals) is a cross-platform mobile application that uses passive smartphone data and machine learning to identify potential indicators of depression and suicidal ideation among college students. The system collects both Active data through surverys (PHQ-9, daily wellness surveys, written responses, audio responses), and Passive data through smartphone sensors (screen time, health metrics, Bluetooth proximity). The goal is to reduce reliance on self-reporting and enable earlier intervention by identifying behavioral patterns associated with mental health risks. This application was developed as part of an NIH-funded research initiative involving WPI and UMass Amherst.',
+        challenges: 
+            'Converting Android-Only code into a True Cross-Patform Architecture: The previous team\'s codebase claimed to use KotlinMuliplatform but contained significant Android-specific code. This challenge included, Refractoring commonMain, Moving Android-only logic, creating expect/actual implementations, Building an iOS architecture from scratch. Another challenge involved passive data reliability. Information on passive data was lost to network failures, app closures, and device restarts. Solutions involved local realm database storage and persistant DataStore tokens. The team grappled with race conditions in survey submission as multiple coroutines were submitting survey data simultaneously causing duplicate submissions, Foreign Key mismatches, and Incorrect audio/written response associations.',
+        features: 
+            [
+                'Cross-platform Android and iOS application built with Kotlin Multiplatform.',
+                'Passive data collection including health metrics, screen time, and Bluetooth proximity.',
+                'Survey platform supporting PHQ-9 assessments, daily wellness surveys, audio, and written responses.',
+                'Secure Microsoft authentication (MSAL) with OAuth-based login.',
+                'Research administration dashboard for participant and study management.',
+                'Machine learning pipeline for data processing, feature engineering, and predictive modeling.'],
+        highlights: 
+            [
+                "Developed a full-stack ecosystem consisting of mobile apps, backend APIs, PostgreSQL database, React dashboard, and ML pipeline.",
+                "Migrated an Android-centric codebase into a shared Kotlin Multiplatform architecture, significantly reducing code duplication.",
+                "Integrated native iOS frameworks including HealthKit, CoreBluetooth, and background task scheduling through Swift–Kotlin interoperab",
+                "Built resilient offline data synchronization using Realm persistence and background workers"
+            ]
     },
 
     'research-enrollment-system': {

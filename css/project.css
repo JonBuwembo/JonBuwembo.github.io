@@ -126,6 +126,7 @@
     font-size: 1.1rem;
     line-height: 1.8;
     margin-bottom: 20px;
+    line-height: 2.0;
 }
 
 .content-section ul {
@@ -139,6 +140,7 @@
     padding-left: 30px;
     position: relative;
     font-size: 1.05rem;
+    line-height: 1.8;
 }
 
 .content-section li::before {
