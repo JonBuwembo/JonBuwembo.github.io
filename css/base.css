@@ -8,8 +8,8 @@
 @media (max-width: 768px) {
 
     .page-layout {
-        margin-left: 100px;
-        margin-right: 100px;
+        margin-left: clamp(20px, 15vw, 230px);
+        margin-right: clamp(20px, 15vw, 230px);
     }
     
 }
