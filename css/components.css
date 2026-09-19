@@ -83,6 +83,27 @@ a {
 }
 
 
+@media (max-width: 768px) {
+    #home {
+        margin-top: 60px !important;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .home-image {
+        order: -1;
+    }
+
+    .home-image img {
+        width: 100%;
+        border-radius: 10px;
+        height: auto;
+        box-shadow: 2px 12px 25px rgba(0, 0, 0, 0.3);
+    }
+
+}
+
 /* EMAIL FORM */
 
 .form-container {

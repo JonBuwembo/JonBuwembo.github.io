@@ -221,4 +221,47 @@
     .container {
         padding: 40px 20px;
     }
+
+    .project-title {
+        font-size: 2rem;
+    }
+
+    .project-meta {
+        flex-direction: column;
+        gap: 16px;
+        padding: 5px 0;
+    }
+
+    .project-links {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+        padding: 14px 20px;
+    }
+
+    .not-found {
+        padding: 60px 20px;
+    }
+
+    .not-found h1 {
+        font-size: 3rem;
+    }
+
+    .skill-tag {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+
+    .project-image {
+        max-height: 300px;
+        border-radius: 12px;
+    }
+
+    .project-subtitle {
+        font-size: 1.05rem;
+        line-height: 1.6;
+    }
 }

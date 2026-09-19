@@ -64,7 +64,8 @@
             "Built a recommendation pipeline capable of retrieving the top 50 most similar movies using KNN similarity search", 
             "Designed database-driven search and filtering across thousands of movie records", 
             "Implemented conversational retrieval workflows combining database search with LLM-generated responses.",
-            "Built a Flask REST API powering 10+ frontend views."
+            "Built a Flask REST API powering 10+ frontend views.",
+            "Performance improvement with pagination and Infinite Scrolling."
         ]
 
     }

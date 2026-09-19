@@ -4,6 +4,15 @@
     margin-left: 230px;
     margin-right: 230px;
 }
+
+@media (max-width: 768px) {
+
+    .page-layout {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    
+}
 .email-body-container {
     --spacing-medium: 430px;
 
