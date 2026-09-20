@@ -5,24 +5,37 @@
     margin-right: 230px;
 }
 
-@media (max-width: 768px) {
-
-    .page-layout {
-        margin-left: clamp(20px, 15vw, 230px);
-        margin-right: clamp(20px, 15vw, 230px);
-    }
-    
-}
 .email-body-container {
     --spacing-medium: 430px;
+    width: var(--spacing-medium);
+    margin: 0 auto;
 
-    margin-left: var(--spacing-medium) ;
-    margin-right: var(--spacing-medium);
 }
 
 .project-body-container {
-    --spacing-medium: 380px;
+    --spacing-medium: 350px;
 
     margin-left: var(--spacing-medium);
     margin-right: var(--spacing-medium);
 }
+
+@media (max-width: 1024px) {
+
+    .page-layout {
+        margin-left: clamp(20px, 5vw, 80px);
+        margin-right: clamp(20px, 5vw, 80px);
+    }
+
+    .project-body-container {
+        margin-left: clamp(30px, 7vw, 80px);
+        margin-right: clamp(30px, 7vw, 80px);
+        margin-top: 40px;
+    }
+
+    .email-body-container {
+        margin-left: clamp(30px, 5vw, 500px);
+        margin-right: clamp(30px, 5vw, 500px);
+    }
+}
+
+

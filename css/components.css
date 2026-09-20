@@ -33,7 +33,7 @@ nav ul {
     }
 
     nav ul {
-       display: none;
+       display: none !important;
        position: absolute;
        top: 100%;
        right: 0;
@@ -133,7 +133,7 @@ a {
 
     #home h1 {
         font-size: clamp(var(--font-size-title-phone), 8vw, var(--font-size-title-pc));
-        line-height: 1.5;
+        line-height: 1.15;
     }
 
     .home-image {
@@ -274,6 +274,30 @@ input:focus, textarea:focus {
     transform: scale(0.98);
 }
 
+
+@media (max-width: 1290px) {
+
+    .form-side-by-side {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 40px;
+        max-width: 800px;
+    }
+
+    .form-container {
+        max-width: 100%;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    input, textarea {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+}
 /* 
 input {
     padding:15px 50px 15px 15px;

@@ -59,7 +59,7 @@
             'Responsive React frontend with dynamic movie browsing'
         ],
         highlights: [
-            "Indexed and processed over 400,000+ movie records",
+            "Indexed and processed over 250,000+ movie records",
             "Integrated machine learning recommendations with a product style Flask Rest API", 
             "Built a recommendation pipeline capable of retrieving the top 50 most similar movies using KNN similarity search", 
             "Designed database-driven search and filtering across thousands of movie records", 

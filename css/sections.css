@@ -3,6 +3,8 @@ html {
     scroll-behavior: smooth;
 }
 
-section {
+.page-layout section {
     margin-top: var(--section-spacing);
 }
+
+

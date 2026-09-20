@@ -222,10 +222,6 @@
         padding: 40px 20px;
     }
 
-    .project-title {
-        font-size: 2rem;
-    }
-
     .project-meta {
         flex-direction: column;
         gap: 16px;
