@@ -23,7 +23,7 @@ nav ul {
     }
 
     .hamburger {
-        display: block;
+        display: block !important;
         background: none;
         border: none;
         font-size: 2rem;
@@ -33,7 +33,7 @@ nav ul {
     }
 
     nav ul {
-       display: none !important;
+       display: none;
        position: absolute;
        top: 100%;
        right: 0;

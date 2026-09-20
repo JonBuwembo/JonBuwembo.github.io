@@ -33,8 +33,8 @@
     }
 
     .email-body-container {
-        margin-left: clamp(30px, 5vw, 500px);
-        margin-right: clamp(30px, 5vw, 500px);
+        margin-left: clamp(20px, 5vw, 500px);
+        margin-right: clamp(20px, 5vw, 500px);
     }
 }
 
