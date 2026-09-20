@@ -13,6 +13,46 @@ nav ul {
     margin: 0;
 }
 
+.hamburger {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    nav {
+        position: relative;
+    }
+
+    .hamburger {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        color: var(--color-secondary);
+        cursor: pointer;
+        padding: 5px;
+    }
+
+    nav ul {
+       display: none;
+       position: absolute;
+       top: 100%;
+       right: 0;
+       flex-direction: column;
+       gap: 15px;
+       padding: 20px;
+       margin-top: 10px;
+       background: white;
+       border-radius: 10px;
+       box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+       z-index: 1000;
+    }
+
+    /* When java script adds the active class, show the menu*/
+    nav ul.active {
+        display: flex;
+    }
+}
+
 a {
     text-decoration: none;
     font-weight: 550;
@@ -89,6 +129,11 @@ a {
         display: grid;
         grid-template-columns: 1fr;
         gap: 50px;
+    }
+
+    #home h1 {
+        font-size: clamp(var(--font-size-title-phone), 8vw, var(--font-size-title-pc));
+        line-height: 1.5;
     }
 
     .home-image {

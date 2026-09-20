@@ -17,6 +17,9 @@
 
     /* Fonts */
     --font-family-base: 'Inter', sans-serif;
+
+    --font-size-title-phone: 2.3rem;
+    --font-size-title-pc: 2.8rem;
     
     /* Spacing */
     --spacing-small: 8px;

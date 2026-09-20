@@ -330,9 +330,11 @@
                 <div class="name-container">
                     <h3 id="name">>  </h3> <span class="cursor">|</span>
                 </div>
+
+                <button id="hamburger" class="hamburger"> &#9776; </button>
                 
                 
-                <ul>
+                <ul id="nav-links">
                     <!-- Clicking these links will navigate to different sections of this page-->
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -509,6 +511,15 @@
         <script type="module" src="js/project-render.js"></script>
         <script type="module" src="js/projects.js"></script>
         <script type="module" src="js/render-icons.js"></script>
+
+        <script>
+            const hamburger = document.getElementById("hamburger");
+            const navLinks = document.getElementById("nav-links");
+
+            hamburger.addEventListener("click", () => {
+                navLinks.classList.toggle("active");
+            })
+        </script>
 
     </body>
 
